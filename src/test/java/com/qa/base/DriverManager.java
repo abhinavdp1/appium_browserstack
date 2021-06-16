@@ -22,13 +22,13 @@ public class DriverManager {
 
     public static void initializeDriver(String deviceID) throws Exception {
         AppiumDriver driver;
-    //    String userName = "omprakashchavan1";
-    //    String accessKey = "WSh657ymwgyZTQkTtVoy";
+         //String userName = "gowthamrupavatha1";
+         //String accessKey = "3UGtjcGp8xF9psSmSfnY";
         String userName = System.getenv("BROWSERSTACK_USERNAME");
         String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
-    //    String browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
+        //String browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
         String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
-    //    String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
+        //String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
         String app = System.getenv("BROWSERSTACK_APP_ID");
 
         JSONObject deviceObj = new JSONObject(JsonParser.parse("Devices.json").getJSONObject(deviceID).toString());

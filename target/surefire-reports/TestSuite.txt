@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 26.135 s <<< FAILURE! - in TestSuite
+com.qa.tests.LoginTests.invalidPassword  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
+	at com.qa.tests.LoginTests.invalidPassword(LoginTests.java:23)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
+	at com.qa.tests.LoginTests.invalidPassword(LoginTests.java:23)
+
+com.qa.tests.LoginTests.invalidUserName  Time elapsed: 0 s  <<< FAILURE!
+java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
+	at com.qa.tests.LoginTests.invalidUserName(LoginTests.java:13)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
+	at com.qa.tests.LoginTests.invalidUserName(LoginTests.java:13)
+
+com.qa.tests.LoginTests.successfulLogin  Time elapsed: 0 s  <<< FAILURE!
+java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
+	at com.qa.tests.LoginTests.successfulLogin(LoginTests.java:33)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
+	at com.qa.tests.LoginTests.successfulLogin(LoginTests.java:33)
+
