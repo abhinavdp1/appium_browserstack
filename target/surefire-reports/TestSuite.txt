@@ -1,22 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 26.135 s <<< FAILURE! - in TestSuite
-com.qa.tests.LoginTests.invalidPassword  Time elapsed: 0.037 s  <<< FAILURE!
-java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
-	at com.qa.tests.LoginTests.invalidPassword(LoginTests.java:23)
-Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
-	at com.qa.tests.LoginTests.invalidPassword(LoginTests.java:23)
-
-com.qa.tests.LoginTests.invalidUserName  Time elapsed: 0 s  <<< FAILURE!
-java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
-	at com.qa.tests.LoginTests.invalidUserName(LoginTests.java:13)
-Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
-	at com.qa.tests.LoginTests.invalidUserName(LoginTests.java:13)
-
-com.qa.tests.LoginTests.successfulLogin  Time elapsed: 0 s  <<< FAILURE!
-java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
-	at com.qa.tests.LoginTests.successfulLogin(LoginTests.java:33)
-Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy7.proxyClassLookup()
-	at com.qa.tests.LoginTests.successfulLogin(LoginTests.java:33)
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 3.788 s <<< FAILURE! - in TestSuite
+com.qa.tests.LoginTests.beforeTest[1](0)  Time elapsed: 3.507 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Unable to create a new remote session. Please check the server log for more details. Original error: Invalid username or password (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.85 seconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ATCs-MacBook-Air.local', ip: '2406:b400:d1:bcfb:29ba:1455:4fba:9a14%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_292'
+Driver info: driver.version: AndroidDriver
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ATCs-MacBook-Air.local', ip: '2406:b400:d1:bcfb:29ba:1455:4fba:9a14%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_292'
+Driver info: driver.version: AndroidDriver
+Caused by: java.lang.reflect.InvocationTargetException
+Caused by: org.openqa.selenium.WebDriverException: 
+Invalid username or password (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.85 seconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ATCs-MacBook-Air.local', ip: '2406:b400:d1:bcfb:29ba:1455:4fba:9a14%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_292'
+Driver info: driver.version: AndroidDriver
 
