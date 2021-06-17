@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="tests">
- <!--   <test name="Google_Pixel_3">
+    <test name="Google_Pixel_3">
         <parameter name="deviceID" value="1"/>
         <classes>
             <class name="com.qa.tests.LoginTests"/>
         </classes>
-    </test>-->
+    </test>
     <test name="iPhone_XS">
             <parameter name="deviceID" value="2"/>
             <classes>
                 <class name="com.qa.tests.LoginTests"/>
             </classes>
-        </test>
+    </test>
 </suite>
