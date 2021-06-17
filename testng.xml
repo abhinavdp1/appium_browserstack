@@ -11,7 +11,7 @@
         <parameter name="deviceID" value="2"/>
         <classes>
             <class name="com.qa.tests.LoginTests"/>
-            <class name="com.qa.tests.ProductTests"/>
+<!--            <class name="com.qa.tests.ProductTests"/>-->
         </classes>
     </test>
 </suite> <!-- Suite -->
