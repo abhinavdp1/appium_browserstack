@@ -7,11 +7,11 @@
             <!--<class name="com.qa.tests.ProductTests"/>-->
         </classes>
     </test>
-    <test name="iPhone_XS">
+ <!--   <test name="iPhone_XS">
         <parameter name="deviceID" value="2"/>
         <classes>
             <class name="com.qa.tests.LoginTests"/>
-            <!--<class name="com.qa.tests.ProductTests"/>-->
+            &lt;!&ndash;<class name="com.qa.tests.ProductTests"/>&ndash;&gt;
         </classes>
-    </test>
+    </test>-->
 </suite> <!-- Suite -->
