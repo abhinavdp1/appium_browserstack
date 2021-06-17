@@ -1,6 +1,7 @@
 package com.qa.base;
 
 import com.qa.utils.JsonParser;
+import com.qa.utils.httpHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -22,6 +23,7 @@ public class DriverManager {
 
     public static void initializeDriver(String deviceID) throws Exception {
         AppiumDriver driver;
+        JSONObject appurlObj;
          //String userName = "gowthamrupavatha1";
          //String accessKey = "3UGtjcGp8xF9psSmSfnY";
         String userName = System.getenv("BROWSERSTACK_USERNAME");
@@ -29,7 +31,17 @@ public class DriverManager {
         //String browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
         String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
         //String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
-        String app = System.getenv("BROWSERSTACK_APP_ID");
+        //String app = System.getenv("BROWSERSTACK_APP_ID");
+        switch (deviceID){
+            case "1":
+                appurlObj = new JSONObject(httpHelper.uploadApp("/Users/abhinav/Downloads/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"));
+                break;
+            case "2":
+                appurlObj = new JSONObject(httpHelper.uploadApp("/Users/abhinav/Downloads/iOS.RealDevice.SauceLabs.Mobile.Sample.app.2.7.1.ipa"));
+                break;
+            default:
+                throw new IllegalStateException("invalid device id" + deviceID);
+        }
 
         JSONObject deviceObj = new JSONObject(JsonParser.parse("Devices.json").getJSONObject(deviceID).toString());
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -39,7 +51,7 @@ public class DriverManager {
         caps.setCapability("project", "My First Project");
         caps.setCapability("build", buildName);
         caps.setCapability("name", "Bstack-[Java] Sample Test");
-        caps.setCapability("app", app);
+        caps.setCapability("app", appurlObj.getString("app_url"));
 
         URL url = new URL("https://"+userName+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub");
 

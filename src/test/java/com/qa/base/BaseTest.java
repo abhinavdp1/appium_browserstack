@@ -12,14 +12,14 @@ public class BaseTest {
     public JSONObject loginUsers;
 
     @Parameters({"deviceID"})
-    @BeforeMethod
+    @BeforeTest
     public void beforeTest(String deviceID) throws Exception {
         DriverManager.initializeDriver(deviceID);
         strings = StringParser.parseStringXML("strings.xml");
         loginUsers = JsonParser.parse("loginUsers.json");
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterTest(alwaysRun = true)
     public void quit() {
         if (DriverManager.getDriver() != null) {
             DriverManager.getDriver().quit();
